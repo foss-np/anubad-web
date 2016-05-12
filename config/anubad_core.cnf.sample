@@ -1,0 +1,28 @@
+[core]
+  plugins = ../plugins/
+  interrupt = False
+
+[gloss "foss"]
+  name = foss-git
+  description = glossary maintain by foss-np community
+  path = /path/to/anubad-web/libs/anubad/gloss/foss/
+  pairs = en2np np2en
+  read-only = False
+  priority = 0
+  fetch = https://github.com/foss-np/np-l10n-glossary/archive/current.tar.gz
+
+[preferences]
+  show-in-system-tray = 1
+  use-system-defaults = 1
+  remember-gui-state = 1
+  enable-plugins = 1
+  append-at-end = False
+  regex-search = False
+  word-net = True
+
+[fonts]
+  viewer = Zegoe Light - U Regular 13
+
+[gui]
+  wm-state = normal
+  geometry = 600x550+700+100
