@@ -1,0 +1,3 @@
+[submodule "libs/anubad"]
+	path = libs/anubad
+	url = https://github.com/foss-np/anubad.git
