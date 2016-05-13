@@ -1,16 +1,4 @@
-#!/bin/bash
-GLOSS="/app/gloss/"
-mkdir -p "$GLOSS"
-cd "$GLOSS"
-
-rm -f current.tar.gz
-echo "Downloading glossary"
-wget https://github.com/foss-np/np-l10n-glossary/archive/current.tar.gz
-tar xvzf current.tar.gz
-mv np-l10n-glossary-current foss
-
-
-echo '[core]
+[core]
   plugins = ../plugins/
   interrupt = False
 
@@ -37,4 +25,4 @@ echo '[core]
 
 [gui]
   wm-state = normal
-  geometry = 600x550+700+100' > config/anubad_core.cnf
+  geometry = 600x550+700+100

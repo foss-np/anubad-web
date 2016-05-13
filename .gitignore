@@ -40,5 +40,3 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
-
-/config/anubad_core.cnf
