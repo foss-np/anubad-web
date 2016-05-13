@@ -7,6 +7,7 @@ for now it is by no means a replacement for anubad desktop version.
 lets see what happens.
 
 ### Contents
+- [Use](#use)
 - [Installation](#installation)
 - [Versioning](#versioning)
 - [Faq](#faq)
@@ -16,6 +17,12 @@ lets see what happens.
 - [Known issues](#known-issues)
 - [License](#gplv3-license)
 - [Disclaimer](#disclaimer)
+
+## Use
+
+For web interface use [http://webad.herokuapp.com/](http://webad.herokuapp.com/)
+
+For api use [webad.herokuapp.com/api/search?phrase=<your search word>](webad.herokuapp.com/api/search?phrase=hello)
 
 ## Installation
 
