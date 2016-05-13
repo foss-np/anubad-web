@@ -18,12 +18,10 @@ def index(page=1):
 
 @route('/search')
 def search():
-    get_data = {}
-    get_data["search_phrase"] = request.GET.get('phrase').strip()
+    search_phrase = request.GET.get('phrase').strip()
 
-    print(get_data["search_phrase"])
-    result = model.search(get_data["search_phrase"])
-    return template('index', search_phrase = get_data["search_phrase"] )
+    result = model.search(search_phrase)
+    return template('result', result=result)
 
 @route('/api/search')
 def api_search():

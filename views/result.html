@@ -1,0 +1,46 @@
+doctype html
+html
+  body
+    #search
+      form action="/search" accept-charset="UTF-8" method="get"
+        input type="text" name="phrase"
+        input type="submit" value="search"
+    #result
+      #exact
+        .word
+          Word:
+          span
+            = result['exact']['word']
+        .transliterate
+          Transliterate:
+          span
+            = result['exact']['transliterate']
+        .attribues
+          br
+          - for key, values in result['exact']['result'].items():
+            .key
+              = key
+            .values
+              - for val in values:
+                span.value
+                  = val
+      #fuzzy
+        - for fuzzy_result in result['fuzzy']:
+          hr
+          .word
+            Word:
+            span
+              = fuzzy_result['word']
+          .transliterate
+            Transliterate:
+            span
+              = fuzzy_result['transliterate']
+          .attribues
+            br
+            - for key, values in fuzzy_result['result'].items():
+              .key
+                = key
+              .values
+                - for val in values:
+                  span.value
+                    = val

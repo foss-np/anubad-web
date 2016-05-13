@@ -1,5 +1,6 @@
 import collections
-from  json import dumps as json_dumps
+from json import dumps as json_dumps
+from operator import itemgetter
 
 class AnubadWrapper:
     def get_item(self, raw_result):
@@ -8,17 +9,27 @@ class AnubadWrapper:
         >>> print(GUI.clips)
         ['आइतबार', 'सन्डे'],
         """
-        # TODO: move it to viewer
-        (instance, src, row) = raw_result
+        (instance, src, row)          = raw_result
         (distance, word, parsed_info) = row
-        meta = (instance, src, distance)
-        parsed_result_for_word = collections.defaultdict(list)
 
+        # TODO: i am not sure of it yet
+        if type(distance)==tuple : distance=distance[0]
+    
+        meta                          = (instance, src, distance)
+        parsed_result_for_word        = collections.defaultdict(list)
+
+        transliterate                 =""
         for key, val in parsed_info:
+            if   key == "_transliterate": transliterate = val; continue
+            elif key[0] == "_" or val == "": continue
             parsed_result_for_word[key].append(val)
-        word_result = { 'distance': distance,
-                        'word': word,
-                        'result': parsed_result_for_word}
+
+        word_result = { 'distance':      distance,
+                        'word':          word,
+                        'transliterate': transliterate,
+                        'result':        dict(parsed_result_for_word)
+        }
+
         return word_result
 
     def get_all_items( self, raw_results ):
@@ -28,6 +39,7 @@ class AnubadWrapper:
         for raw_r in raw_results[1]:
             parsed_result['fuzzy'].append(self.get_item(raw_r))
 
+        parsed_result['fuzzy'].sort(key=itemgetter('distance'))
         return parsed_result
 
     def get_json_dumps( self, raw_results):
