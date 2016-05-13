@@ -62,7 +62,7 @@ lets see what happens.
 3. install dependencies
 
     ```bash
-        $ pip install -f requirements.txt
+        $ pip install -r requirements.txt
     ```
 
 4. configure project 
