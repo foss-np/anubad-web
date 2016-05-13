@@ -1,6 +1,5 @@
 import collections
-
-from IPython import embed
+from  json import dumps as json_dumps
 
 class AnubadWrapper:
     def get_item(self, raw_result):
@@ -30,3 +29,7 @@ class AnubadWrapper:
             parsed_result['fuzzy'].append(self.get_item(raw_r))
 
         return parsed_result
+
+    def get_json_dumps( self, raw_results):
+        json_result = json_dumps(self.get_all_items(raw_results), ensure_ascii=False)
+        return json_result

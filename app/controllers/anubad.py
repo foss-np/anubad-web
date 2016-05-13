@@ -31,5 +31,5 @@ def api_search():
     get_data["search_phrase"] = request.GET.get('phrase').strip()
 
     print(get_data["search_phrase"])
-    result = model.search(get_data["search_phrase"])
+    result = model.json_search(get_data["search_phrase"])
     return str(result)
