@@ -21,16 +21,17 @@ lets see what happens.
 
 ### Requirement
     
-    > We give you no guarantee that it will run in your development environment. It has been tested in linux with python version 3.5.1 only
+> We give you no guarantee that it will run in your development environment. It has been tested in linux with python version 3.5.1 only
     
-    * git
-    * python3 (preferrable 3.5)
-    * [**bottle ()**](bottlepy.org)
-    * [**plim**](http://plim.readthedocs.io/en/latest/)
+* git
+* python3 (preferrable 3.5)
+* [**bottle ()**](bottlepy.org)
+* [**plim**](http://plim.readthedocs.io/en/latest/)
     
 ### Setting up the development environment
 
-    * virtualenv [ optional ]
+1. virtualenv (optional)
+
     ```bash
         # create virtualenv
         $ virtualenv venv -p /usr/bin/python3 
@@ -39,7 +40,8 @@ lets see what happens.
         source /path/to/virtualenv/bin/activate
     ```
     
-    * clone it in your machine
+2. clone it in your machine and install submodules
+
     ```bash
         # go to projects directory
         $ cd /path/to/projects
@@ -49,23 +51,22 @@ lets see what happens.
         
         # go to project root directory
         $ cd anubad-web
-    ```
-    
-    * install dependencies
-    ```bash
-        $ pip install -f requirements.txt
-    ```
-  
-    * update submodules
-    ```bash
+        
         # init submodules
         $ git submodule init
         
         # update submodules
         $ git submodule update
     ```
+    
+3. install dependencies
 
-    * configure project 
+    ```bash
+        $ pip install -f requirements.txt
+    ```
+
+4. configure project 
+
     ```bash
         # go to anubad submodule
         $ cd libs/anubad
@@ -83,11 +84,18 @@ lets see what happens.
         
     ```
     
-    * update your path in anubad for gloss in the file **config/anubad_core.cnf**
+5. create and configure **config/anubad_core.cnf**
+    
+    ```bash
+        $ cp config/anubad_core.cnf.sample config/anubad_core.cnf
+    ```
+
+    > update your path in anubad for gloss in the file **config/anubad_core.cnf**
       / this line /
       > path = /path/to/anubad-web/libs/anubad/gloss/foss/
    
-    * run server
+6. run server
+
     ```bash
         python run.py
     ```
@@ -110,10 +118,10 @@ lets see what happens.
 
 ## TODOs
 
-    * Port Database from the file
-    * Look and feel ( that UIUX thing)
-    * Port all features of desktop anubad
-    * A lot of things
+* Port Database from the file
+* Look and feel ( that UIUX thing)
+* Port all features of desktop anubad
+* A lot of things
 
 ## Known Issuses
 
