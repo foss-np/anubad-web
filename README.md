@@ -22,7 +22,7 @@ lets see what happens.
 
 For web interface use [http://webad.herokuapp.com/](http://webad.herokuapp.com/)
 
-For api use [webad.herokuapp.com/api/search?phrase=<your search word>](webad.herokuapp.com/api/search?phrase=hello)
+For api use [http://webad.herokuapp.com/api/search?phrase=word](http://webad.herokuapp.com/api/search?phrase=word)
 
 ## Installation
 
