@@ -18,9 +18,11 @@ def index(page=1):
 
 @route('/search')
 def search():
-    search_phrase = request.GET.get('phrase').strip()
-
-    result = model.search(search_phrase)
+    search_phrase = request.GET.getunicode('phrase').strip()
+    try:
+        result = model.search(search_phrase)
+    except IndexError:
+        result = None
     return template('result', result=result)
 
 @route('/api/search')
