@@ -7,6 +7,7 @@ for now it is by no means a replacement for anubad desktop version.
 lets see what happens.
 
 ### Contents
+- [Use](#use)
 - [Installation](#installation)
 - [Versioning](#versioning)
 - [Faq](#faq)
@@ -17,6 +18,12 @@ lets see what happens.
 - [License](#gplv3-license)
 - [Disclaimer](#disclaimer)
 
+## Use
+
+For web interface use [http://webad.herokuapp.com/](http://webad.herokuapp.com/)
+
+For api use [http://webad.herokuapp.com/api/search?phrase=word](http://webad.herokuapp.com/api/search?phrase=word)
+
 ## Installation
 
 ### Requirement
@@ -25,7 +32,7 @@ lets see what happens.
     
 * git
 * python3 (preferrable 3.5)
-* [**bottle ()**](bottlepy.org)
+* [**bottle**](bottlepy.org)
 * [**plim**](http://plim.readthedocs.io/en/latest/)
     
 ### Setting up the development environment
@@ -62,7 +69,7 @@ lets see what happens.
 3. install dependencies
 
     ```bash
-        $ pip install -f requirements.txt
+        $ pip install -r requirements.txt
     ```
 
 4. configure project 
@@ -99,6 +106,22 @@ lets see what happens.
     ```bash
         python run.py
     ```
+
+### Deployment in Heroku
+
+```bash
+    # Create a heroku app
+    $ heroku apps:create webad
+
+    # push the branch heroku-deploy to master branch in heroku
+    git push heroku heroku-deploy:master
+
+    # run an instance of the app
+    $ heroku ps:scale web=1
+
+    # open the website
+    $ heroku open
+```
 
 ## Versioning
 
