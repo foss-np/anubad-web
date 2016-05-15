@@ -32,7 +32,7 @@ For api use [http://webad.herokuapp.com/api/search?phrase=word](http://webad.her
     
 * git
 * python3 (preferrable 3.5)
-* [**bottle ()**](bottlepy.org)
+* [**bottle**](bottlepy.org)
 * [**plim**](http://plim.readthedocs.io/en/latest/)
     
 ### Setting up the development environment
@@ -106,6 +106,22 @@ For api use [http://webad.herokuapp.com/api/search?phrase=word](http://webad.her
     ```bash
         python run.py
     ```
+
+### Deployment in Heroku
+
+```bash
+    # Create a heroku app
+    $ heroku apps:create webad
+
+    # push the branch heroku-deploy to master branch in heroku
+    git push heroku heroku-deploy:master
+
+    # run an instance of the app
+    $ heroku ps:scale web=1
+
+    # open the website
+    $ heroku open
+```
 
 ## Versioning
 
