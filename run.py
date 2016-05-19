@@ -14,7 +14,7 @@ def server_static(filepath):
 
 from bottle import run, debug
 debug(True)
-run(host='localhost', port=8080, reloader=True)
+run(host='localhost', port=9009, reloader=True)
 
 ## gunicorn
 #app = default_app()
