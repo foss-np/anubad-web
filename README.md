@@ -20,9 +20,9 @@ lets see what happens.
 
 ## Use
 
-For web interface use [http://webad.herokuapp.com/](http://webad.herokuapp.com/)
+For web interface use [http://anubad.herokuapp.com/](http://webad.herokuapp.com/)
 
-For api use [http://webad.herokuapp.com/api/search?phrase=word](http://webad.herokuapp.com/api/search?phrase=word)
+For api use [http://anubad.herokuapp.com/api/search?phrase=word](http://webad.herokuapp.com/api/search?phrase=word)
 
 ## Installation
 
