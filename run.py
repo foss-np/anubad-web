@@ -8,9 +8,9 @@ from bottle import route, static_file, default_app
 from app.controllers import *
 
 
-@route('/stat/<filepath:path>')
+@route('/static/<filepath:path>')
 def server_static(filepath):
-	return static_file(filepath, root='./stat/')
+	return static_file(filepath, root='./static/')
 
 from bottle import run, debug
 debug(True)
