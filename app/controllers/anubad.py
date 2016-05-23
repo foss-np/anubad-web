@@ -27,9 +27,7 @@ def search():
 
 @route('/api/search')
 def api_search():
-    get_data = {}
-    get_data["search_phrase"] = request.GET.get('phrase').strip()
+    search_phrase = request.GET.getunicode('phrase').strip()
 
-    print(get_data["search_phrase"])
-    result = model.json_search(get_data["search_phrase"])
+    result = model.json_search(search_phrase)
     return str(result)
