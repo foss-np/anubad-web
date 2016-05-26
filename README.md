@@ -69,9 +69,13 @@ For api use [http://anubad.herokuapp.com/api/search?phrase=word](http://webad.he
 3. install dependencies
 
     ```bash
+	# For virtualenv based installation
         $ pip install -r requirements.txt
     ```
-
+    ```bash
+	# For system wide installation 
+        $ sudo pip install -r requirements.txt
+    ```
 4. configure project 
 
     ```bash
