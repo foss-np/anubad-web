@@ -20,9 +20,9 @@ lets see what happens.
 
 ## Use
 
-For web interface use [http://anubad.herokuapp.com/](http://webad.herokuapp.com/)
+For web interface use [http://anubad.herokuapp.com/](http://anubad.herokuapp.com/)
 
-For api use [http://anubad.herokuapp.com/api/search?phrase=word](http://webad.herokuapp.com/api/search?phrase=word)
+For api use [http://anubad.herokuapp.com/api/search?phrase=word](http://anubad.herokuapp.com/api/search?phrase=word)
 
 ## Installation
 
@@ -32,7 +32,7 @@ For api use [http://anubad.herokuapp.com/api/search?phrase=word](http://webad.he
     
 * git
 * python3 (preferrable 3.5)
-* [**bottle**](bottlepy.org)
+* [**bottle**](http://bottlepy.org)
 * [**plim**](http://plim.readthedocs.io/en/latest/)
     
 ### Setting up the development environment
